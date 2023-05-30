@@ -101,7 +101,7 @@ export class Something extends Component {
   countPositiveFeedbackPercentage = () => {
     const { good } = this.state;
     const total = this.countTotalFeedback();
-    return total ? ((good / total) * 100).toFixed(2) : 0; // If total is 0 return 0 to avoid division by 0
+    return total ? ((good / total) * 100).toFixed(2) : 0;
   };
 
   render() {
