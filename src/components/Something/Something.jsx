@@ -76,51 +76,51 @@
 
 // ---------------------------------------------------------------------------------
 
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-export class Something extends Component {
-  state = {
-    title: 'Please leave feadback',
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
+// export class Something extends Component {
+//   state = {
+//     title: 'Please leave feadback',
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   };
 
-  onButtonClick = type => {
-    this.setState(prevState => ({
-      ...prevState,
-      [type]: prevState[type] + 1,
-    }));
-  };
+//   onButtonClick = type => {
+//     this.setState(prevState => ({
+//       ...prevState,
+//       [type]: prevState[type] + 1,
+//     }));
+//   };
 
-  countTotalFeedback = () => {
-    const { good, neutral, bad } = this.state;
-    return good + neutral + bad;
-  };
+//   countTotalFeedback = () => {
+//     const { good, neutral, bad } = this.state;
+//     return good + neutral + bad;
+//   };
 
-  countPositiveFeedbackPercentage = () => {
-    const { good } = this.state;
-    const total = this.countTotalFeedback();
-    return total ? ((good / total) * 100).toFixed(2) : 0;
-  };
+//   countPositiveFeedbackPercentage = () => {
+//     const { good } = this.state;
+//     const total = this.countTotalFeedback();
+//     return total ? ((good / total) * 100).toFixed(2) : 0;
+//   };
 
-  render() {
-    const { title, good, neutral, bad } = this.state;
-    const totalFeedback = this.countTotalFeedback();
-    const positivePercentage = this.countPositiveFeedbackPercentage();
+//   render() {
+//     const { title, good, neutral, bad } = this.state;
+//     const totalFeedback = this.countTotalFeedback();
+//     const positivePercentage = this.countPositiveFeedbackPercentage();
 
-    return (
-      <div>
-        <h2>{title}</h2>
-        <button onClick={() => this.onButtonClick('good')}>Good</button>
-        <button onClick={() => this.onButtonClick('neutral')}>Neutral</button>
-        <button onClick={() => this.onButtonClick('bad')}>Bad</button>
-        <p>Good: {good}</p>
-        <p>Neutral: {neutral}</p>
-        <p>Bad: {bad}</p>
-        <p>Total: {totalFeedback}</p>
-        <p>Positive feedback: {positivePercentage}%</p>
-      </div>
-    );
-  }
-}
+//     return (
+//       <div>
+//         <h2>{title}</h2>
+//         <button onClick={() => this.onButtonClick('good')}>Good</button>
+//         <button onClick={() => this.onButtonClick('neutral')}>Neutral</button>
+//         <button onClick={() => this.onButtonClick('bad')}>Bad</button>
+//         <p>Good: {good}</p>
+//         <p>Neutral: {neutral}</p>
+//         <p>Bad: {bad}</p>
+//         <p>Total: {totalFeedback}</p>
+//         <p>Positive feedback: {positivePercentage}%</p>
+//       </div>
+//     );
+//   }
+// }
