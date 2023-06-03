@@ -1,15 +1,8 @@
-// import { Something } from './Something/Something';
-
-// export const App = () => {
-//   return (
-//     <Something />
-//   );
-// };
-
 import React, { Component } from 'react';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptons';
 import { Section } from './Section/Section';
+import '../../src/index.css';
 
 export class App extends Component {
   state = {
@@ -42,7 +35,7 @@ export class App extends Component {
     const positivePercentage = this.countPositiveFeedbackPercentage();
 
     return (
-      <div>
+      <div className="container">
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
